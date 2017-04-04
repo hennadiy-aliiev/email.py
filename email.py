@@ -2,16 +2,16 @@ import re
 import sys
 
 
-def sorting(file1, file2):
-    with open("original.txt") as f:
+def sorting(input_file, outputfile1, outputfile2):
+    with open(input_file) as f:
         emails = f.readlines()
-        sorted_emails = emails.sort()
+        emails.sort()
 
-        with open(file1, "w") as f1:
+    with open(outputfile1, "w") as f1:
             for line in emails:
                 f1.write(line)
 
-        with open(file2, "w") as f2:
+    with open(outputfile2, "w") as f2:
             pattern = r"y"
             for line in emails:
                 if re.match(pattern, line):
@@ -19,8 +19,8 @@ def sorting(file1, file2):
 
 
 if __name__ == "__main__":
-    
-    file1 = sys.argv[1]
-    file2 = sys.argv[2]
-    sorting(file1, file2)
-    
+
+    input_file = sys.argv[1]
+    outputfile1 = sys.argv[2]         
+    outputfile2 = sys.argv[3]
+    sorting(input_file, outputfile1, outputfile2)

@@ -36,4 +36,4 @@ if __name__ == "__main__":
         Example: "python email.py origin.txt output1.txt output2.txt k" where:
         origin.txt - file with all your emails,
         output1.txt - new output file with sorted emails,
-        output2.txt k - new output file with emails starting with k character.""")
+        output2.txt k - new output file with emails starting with "k" character.""")
